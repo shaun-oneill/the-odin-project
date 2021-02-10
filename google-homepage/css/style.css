@@ -83,6 +83,7 @@ main {
     border: 2px solid var(--light-grey);
     border-radius: 25px;
     justify-content: center;
+    margin-top: 10px;
     padding: 5px;
     width: 40em;
 }
