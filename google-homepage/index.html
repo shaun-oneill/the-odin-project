@@ -6,31 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google by Shaun</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="flex">
 
     <nav>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Store</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Gmail</a></li>
-            <li><a href="#">Images</a></li>
-        </ul>
+        <div class="flex">
+            <ul class="flex">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+            <ul class="flex">
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li>
+                    <div id="side-images" class="flex">
+                        <svg class="gb_Xe" focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                            </path>
+                        </svg>
+                        <img class="gb_Da gbii"
+                            src="https://lh3.googleusercontent.com/ogw/ADGmqu-I-OWeYByCn3pDcDC9gTI7fVRRoR536mRchvlP=s32-c-mo"
+                            srcset="https://lh3.googleusercontent.com/ogw/ADGmqu-I-OWeYByCn3pDcDC9gTI7fVRRoR536mRchvlP=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ADGmqu-I-OWeYByCn3pDcDC9gTI7fVRRoR536mRchvlP=s64-c-mo 2x "
+                            alt="" aria-hidden="true" data-noaft="" data-atf="1">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
     </nav>
 
-    <main>
+    <main class="flex">
         <img src="images/googlelogo_color_272x92dp.png" alt="Google logo">
-        <input type="text">
-        <button>Google Search</button>
-        <button>I'm Feeling Lucky</button>
 
-        <img src="images/shield_security_checkup_green_2x_web_96dp.png" alt="Shield Security Logo">
-        <p>It's Safer Internet Day.
-            <a href="#">Take a 2-minute Security Checkup to strengthen your account</a>
-        </p>
+        <div id="search-bar" class="flex">
+            <img src="images/Magnifying_glass_icon.svg" alt="">
+            <input type="search">
+        </div>
+
+        <div id="buttons">
+            <button>Google Search</button>
+            <button>I'm Feeling Lucky</button>
+        </div>
+
+        <div id="message" class="flex">
+            <img src="images/shield_security_checkup_green_2x_web_96dp.png" alt="Shield Security Logo">
+            <p>It's Safer Internet Day.
+                <a href="#">Take a 2-minute Security Checkup to strengthen your account</a>
+            </p>
+        </div>
 
         <p>Google offered in: <a href="#">Français</a></p>
     </main>
@@ -38,17 +64,21 @@
     <footer>
         <p>Canada</p>
 
-        <ul>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">How Search works</a></li>
-        </ul>
+        <hr>
 
-        <ul>
-            <li><a href="#">Privacy/a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
+        <div class="flex">
+            <ul class="flex">
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">How Search works</a></li>
+            </ul>
+
+            <ul class="flex">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
     </footer>
 
 </body>
