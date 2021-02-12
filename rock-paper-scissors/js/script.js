@@ -1,36 +1,66 @@
-function computerPlay() {
-    let computerChoice = null;
-    let chance = Math.random();
+const type = [ "Grass", "Fire", "Water"];
+const pokemon = [
+    {
+        "id": 001,
+        "name": "Bulbasaur",
+        "type": type[0]
+    },
+    {
+        "id": 004,
+        "name": "Charmander",
+        "type": type[1]
+    },
+    {
+        "id": 007,
+        "name": "Squirtle",
+        "type": type[2]
+    }
+]
 
-    if (chance <= 0.33) {
-        computerChoice = "ROCK";
-    } else if (chance <= 0.66) {
-        computerChoice = "PAPER";
+let playerPokemon, computerPokemon, playerPoints = 0, computerPoints = 0;
+const MAX_POINTS = 10;
+
+// Start the game
+
+// Player selects Pokemon
+function playerSelect(selectedPokemon) {
+    playerPokemon = selectedPokemon;
+    computerSelect();
+    document.getElementById("playerPokemon").innerHTML = playerPokemon.name;
+    document.getElementById("computerPokemon").innerHTML = computerPokemon.name;
+    battle();
+}
+
+// Computer selects Pokemon
+function computerSelect() {
+    computerPokemon = pokemon[Math.floor(Math.random() * pokemon.length)];
+}
+
+// See who wins
+function battle() {
+    if (
+        (playerPokemon.type === "Grass" && computerPokemon.type === "Water") ||
+        (playerPokemon.type === "Fire" && computerPokemon.type === "Grass") ||
+        (playerPokemon.type === "Water" && computerPokemon.type === "Fire")
+    ) {
+        document.getElementById("winningPokemon").innerHTML = playerPokemon.name;
+        playerPoints++;
+        document.getElementById("playerPoints").innerHTML = playerPoints;
+    } else if (playerPokemon.type === computerPokemon.type) {
+        document.getElementById("winningPokemon").innerHTML = "no winner";
     } else {
-        computerChoice = "SCISSORS";
+        document.getElementById("winningPokemon").innerHTML = computerPokemon.name;
+        computerPoints++;
+        document.getElementById("computerPoints").innerHTML = computerPoints;
     }
 
-    return computerChoice;
-}
-
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toUpperCase();
-    computerSelection = computerSelection.toUpperCase();
-    let message = playerSelection + " vs " + computerSelection;
-    
-    if (playerSelection === computerSelection) {
-        return message + " is a tie!";
-    } else if ((playerSelection === "ROCK" && computerSelection === "PAPER") || 
-               (playerSelection === "PAPER" && computerSelection === "SCISSORS") || 
-               (playerSelection === "SCISSORS" && computerSelection === "ROCK")) {
-                   return message + ", computer wins!";
-               } else {
-                   return message + ", player wins!";
-               }
-}
-
-console.log(playRound("rock", computerPlay()));
-
-function game() {
-
+    if (playerPoints === MAX_POINTS || computerPoints === MAX_POINTS) {
+        if (playerPoints > computerPoints) {
+            document.getElementById("matchWinner").innerHTML = "Player";
+        } else {
+            document.getElementById("matchWinner").innerHTML = "Computer";
+        }
+        document.getElementById("pokemon").style.display = "none";
+        document.getElementById("commentary").style.display = "none";
+    }
 }

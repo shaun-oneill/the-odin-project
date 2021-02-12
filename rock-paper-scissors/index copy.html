@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle: GEN I</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="arena">
+        <button onclick="playerChoice('Bulbasaur')">
+            <img src="images/bulbasaur.png" alt="Bulbasaur">
+        </button>
+
+        <button onclick="playerChoice('Charmander')">
+            <img src="images/charmander.png" alt="Charmander">
+        </button>
+
+        <button onclick="playerChoice('Squirtle')">
+            <img src="images/squirtle.png" alt="Squirtle">
+        </button>
+
+        <h2>Player Choice: <span id="playerChoice"></span></h2>
+        <h2>Computer Choice: <span id="computerChoice"></span></h2>
+        <h2>Winner: <span id="winner"></span></h2>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

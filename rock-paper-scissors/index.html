@@ -5,10 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <title>Pokemon Battle: GEN I</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+
+    <div id="arena">
+        <div id="pokemon">
+            <button onclick="playerSelect(pokemon[0])">
+                <img src="images/bulbasaur.png" alt="Bulbasaur">
+            </button>
+
+            <button onclick="playerSelect(pokemon[1])">
+                <img src="images/charmander.png" alt="Charmander">
+            </button>
+
+            <button onclick="playerSelect(pokemon[2])">
+                <img src="images/squirtle.png" alt="Squirtle">
+            </button>
+        </div>
+
+        <div id="commentary">
+            <h2>Player Choice: <span id="playerPokemon">none</span></h2>
+            <h2>Computer Choice: <span id="computerPokemon">none</span></h2>
+            <h2>Round Winner: <span id="winningPokemon">none</span></h2>
+            <br>
+            <h2>Player Points: <span id="playerPoints">0</span></h2>
+            <h2>Computer Points: <span id="computerPoints">0</span></h2>
+        </div>
+
+        <h2>Match Winner: <span id="matchWinner">none</span></h2>
+    </div>
 
 
     <script src="js/script.js"></script>
