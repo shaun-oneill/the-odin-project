@@ -48,6 +48,8 @@ $green: #5b7c2f;
 $black: #1f1f1f;
 $blue: #0b1b96;
 $pink: #be2670;
+$red: #ff0000;
+$dark-red: #4e0000;
 
 
 #gameboy,
@@ -108,7 +110,7 @@ $pink: #be2670;
             margin-left: 17px;
 
             #light {
-                background-color: #ff0000;
+                background-color: $dark-red;
                 border-radius: 50px;
                 height: 13px;
                 margin-left: 15px;
@@ -225,7 +227,7 @@ $pink: #be2670;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         height: 60px;
-        width: 150px;
+        width: 190px;
 
         .btn-rect {
             background-color: $dark-grey;
@@ -248,7 +250,7 @@ $pink: #be2670;
     #speaker {
         display: flex;
         justify-content: space-between;
-        margin-left: 35px;
+        margin-left: 20px;
         margin-right: 10px;
         transform: rotate(-25deg);
         width: 150px;

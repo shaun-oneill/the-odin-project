@@ -64,3 +64,17 @@ function battle() {
         document.getElementById("commentary").style.display = "none";
     }
 }
+
+
+// GAME BOY
+
+function toggle() {
+    let darkRed = "#4e0000";
+    let red = "#ff0000";
+
+    if (
+        document.getElementById("light").style.backgroundColor = darkRed
+    ) {
+        document.getElementById("light").style.backgroundColor = red;
+    }
+}
