@@ -18,7 +18,7 @@ const pokemon = [
 ]
 
 let playerPokemon, computerPokemon, playerPoints = 0, computerPoints = 0;
-const MAX_POINTS = 10;
+const MAX_POINTS = 5;
 
 // Start the game
 
@@ -67,14 +67,9 @@ function battle() {
 
 
 // GAME BOY
-
-function toggle() {
-    let darkRed = "#4e0000";
-    let red = "#ff0000";
-
-    if (
-        document.getElementById("light").style.backgroundColor = darkRed
-    ) {
-        document.getElementById("light").style.backgroundColor = red;
-    }
-}
+// function togglePower() {
+//     const lightOn = "#ff0000";
+//     const screenOn = "block";
+//     document.getElementById("light").style.backgroundColor = lightOn;
+//     document.getElementById("arena").style.display = screenOn;
+// }
