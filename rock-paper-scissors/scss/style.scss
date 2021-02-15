@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: #352b23;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +60,7 @@ $dark-red: #4e0000;
 
 #gameboy {
     background-color: $light-grey;
-    height: 800px;
+    height: 840px;
     width: 500px;
 }
 
@@ -220,13 +221,15 @@ $dark-red: #4e0000;
 #box-3 {
     display: flex;
     height: 130px;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 60px;
+    position: relative;
 
     #select-start {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         height: 60px;
+        position: absolute;
         width: 190px;
 
         .btn-rect {
@@ -250,10 +253,11 @@ $dark-red: #4e0000;
     #speaker {
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
-        margin-right: 10px;
+        position: absolute;
         transform: rotate(-25deg);
         width: 150px;
+        top: 40px;
+        right: 30px;
 
         .line {
             border: solid 2px $dark-grey;
